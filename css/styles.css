@@ -1,0 +1,565 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+button::-moz-focus-inner
+{
+    border: 0;
+}
+
+.container
+{
+    align-self: center;
+    width: 80%;
+}
+
+.container-full
+{
+    text-align: center;
+    width: 100%;
+}
+
+.footer
+{
+    margin: 0 16px;
+    padding: 16px 0;
+}
+
+.footer-container
+{
+    margin-top: auto;
+}
+
+.home-page
+{
+    text-align: center;
+}
+
+.home-page img
+{
+    height: 128px;
+    width: 128px;
+}
+
+.mastery-table
+{
+    background-color: lightblue;
+    border-collapse: collapse;
+    margin: 16px auto;
+    min-width: 80%;
+    text-align: center;
+}
+
+.mastery-table td:first-child
+{
+    border-right: none !important;
+}
+
+.mastery-table td:nth-child(2)
+{
+    border-left: none !important;
+    text-align: left;
+}
+
+.mastery-table th, .mastery-table td
+{
+    border: 1px solid royalblue;
+    padding: 4px 8px;
+}
+
+.mastery-table .champion-icon
+{
+    height: 32px;
+    vertical-align: middle;
+    width: 32px;
+}
+
+.profile-banner
+{
+    align-items: center;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+    padding: 32px 16px;
+    text-align: center;
+    width: 100%;
+}
+
+.profile-banner .profile
+{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 200%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.profile-banner .profile span > *
+{
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.profile-banner .profile .summoner-icon
+{
+    height: 128px;
+    margin-right: 8px;
+    width: 128px;
+}
+
+.profile-banner .profile .update-button
+{
+    background-color: transparent;
+    border: 2px solid royalblue;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 60%;
+    padding: 8px;
+}
+
+.profile-banner .profile .update-button:hover
+{
+    background-color: royalblue;
+}
+
+.profile-banner .top-mastery-champions
+{
+    margin: 0 auto;
+}
+
+.profile-banner .top-mastery-champions > div
+{
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 0 32px;
+    position: relative;
+    width: 160px;
+}
+
+.profile-banner .top-mastery-champions > div::after
+{
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    content: '';
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    top: 100%;
+}
+
+.profile-banner .top-mastery-champions > .mastery-max
+{
+    background-color: #8c2828;
+    -webkit-box-shadow: 8px 0px 16px 0px #8c2828;
+    -moz-box-shadow: 8px 0px 16px 0px #8c2828;
+    box-shadow: 8px 0px 16px 0px #8c2828;
+}
+
+.profile-banner .top-mastery-champions .mastery-max::after
+{
+    border-top: 40px solid #782828;
+}
+
+.profile-banner .top-mastery-champions div:not(.mastery-max)
+{
+    background-color: #7e5c1d;
+    -webkit-box-shadow: 8px 0px 16px 0px #7e5c1d;
+    -moz-box-shadow: 8px 0px 16px 0px #7e5c1d;
+    box-shadow: 8px 0px 16px 0px #7e5c1d;
+}
+
+.profile-banner .top-mastery-champions div:not(.mastery-max)::after
+{
+    border-top: 32px solid #694f1f;
+}
+
+.profile-banner .top-mastery-champions > div .champion-image
+{
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+.profile-banner .top-mastery-champions > div h3, .profile-banner .top-mastery-champions > div p
+{
+    margin-bottom: 0;
+    margin-top: 16px;
+}
+
+.profile-banner .top-mastery-champions > div.mastery-champion-1
+{
+    padding-bottom: 36px;
+    padding-top: 36px;
+}
+
+.profile-banner .top-mastery-champions > div.mastery-champion-1 img
+{
+    border-color: gold;
+    height: 96px;
+    width: 96px;
+}
+
+.profile-banner .top-mastery-champions > div.mastery-champion-2
+{
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+
+.profile-banner .top-mastery-champions > div.mastery-champion-2 img
+{
+    border-color: silver;
+    height: 80px;
+    width: 80px;
+}
+
+.profile-banner .top-mastery-champions > div.mastery-champion-3
+{
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+.profile-banner .top-mastery-champions > div.mastery-champion-3 img
+{
+    border-color: chocolate;
+    height: 64px;
+    width: 64px;
+}
+
+.region-box
+{
+    background-color: rgba(32, 32, 32, 0.6);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.region-box .region-list
+{
+    background-color: white;
+    border-radius: 8px;
+    height: 80%;
+    left: 50%;
+    max-height: 480px;
+    max-width: 480px;
+    min-width: 240px;
+    overflow-y: auto;
+    padding: 32px 8px;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.region-box .region-list .close-region-list
+{
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: gray;
+    cursor: pointer;
+    padding: 0;
+    position: fixed;
+    right: 16px;
+    top: 16px;
+}
+
+.region-box .region-list .close-region-list:hover
+{
+    color: black;
+}
+
+.region-box .region-list ul
+{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    margin: 16px auto;
+    min-width: 180px;
+    padding: 0;
+    width: 80%;
+}
+
+.region-box .region-list ul li
+{
+    list-style-type: none;
+}
+
+.region-box .region-list ul li button
+{
+    background-color: darkgray;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 8px 0;
+    padding: 8px 16px;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.region-box .region-list ul li button:hover
+{
+    background-color: dimgray;
+}
+
+.search-box
+{
+    display: block;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    min-width: 160px;
+    text-align: center;
+    width: 100%;
+}
+
+.search-form
+{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 48px;
+    width: 100%;
+}
+
+.search-form .region-select
+{
+    background-color: white;
+    border: 2px solid lightblue;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 12px 16px;
+    transform: translateY(0px); /* Bug Fix for Firefox */
+}
+
+.search-form .region-select:hover
+{
+    background-color: lightblue;
+}
+
+.search-form .search-button
+{
+    background-color: lightblue;
+    border: 2px solid lightblue;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    display: inline-block;
+    padding: 12px;
+}
+
+.search-form .search-input
+{
+    border: 2px solid lightblue;
+    border-radius: 4px 0 0 4px;
+    display: inline-block;
+    padding: 12px;
+    width: 100%;
+}
+
+.search-form .search-input:focus
+{
+    outline: none;
+}
+
+.stats-container
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    text-align: center;
+}
+
+.stats-container .group-btn
+{
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+
+.stats-container .group-btn button
+{
+    background-color: transparent;
+    border: 1px solid royalblue;
+    cursor: pointer;
+    margin-left: -1px;
+    padding: 4px 8px;
+}
+
+.stats-container .group-btn button:first-child
+{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.stats-container .group-btn button:last-child
+{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.stats-container .group-btn button:hover, .stats-container .group-btn button.active
+{
+    background-color: royalblue;
+}
+
+.stats-container .stats-table-box table
+{
+    background-color: lightblue;
+    border-collapse: collapse;
+    display: none;
+    margin: 16px auto;
+    min-width: 80%;
+    text-align: center;
+}
+
+.stats-container .stats-table-box table td:first-child
+{
+    border-right: none !important;
+}
+
+.stats-container .stats-table-box table td:nth-child(2)
+{
+    border-left: none !important;
+    text-align: left;
+}
+
+.stats-container .stats-table-box table th, .stats-container .stats-table-box table td
+{
+    border: 1px solid royalblue;
+    padding: 4px 8px;
+}
+
+.stats-container .stats-table-box table img
+{
+    height: 32px;
+    vertical-align: middle;
+    width: 32px;
+}
+
+.stats-container .stats-table-box .no-stats-available
+{
+    display: none;
+}
+
+.stats-link
+{
+    align-self: center;
+    color: black;
+    text-decoration: none;
+}
+
+.stats-link:hover
+{
+    color: white;
+}
+
+.top-bar
+{
+    background-color: royalblue;
+    display: flex;
+    flex-wrap: wrap;
+    height: 48px;
+    margin-bottom: auto;
+    padding: 4px 32px;
+}
+
+.top-bar .brand
+{
+    align-self: center;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    text-decoration: none;
+}
+
+.top-bar .brand:hover
+{
+    color: white;
+}
+
+.top-bar .brand .logo
+{
+    align-self: center;
+    height: 36px;
+    margin-right: 4px;
+    width: 36px;
+}
+
+.top-bar .brand span
+{
+    align-self: center;
+}
+
+.top-bar .search
+{
+    align-self: center;
+    margin-left: auto;
+}
+
+.top-bar .search .search-form
+{
+    height: 40px;
+    margin: 0;
+}
+
+.top-bar .search .search-form > *
+{
+    padding-bottom: 0;
+    padding-top: 0;
+    width: auto;
+}
+
+.warning
+{
+    background-color: tomato;
+    bottom: 0;
+    padding: 8px;
+    position: fixed;
+    width: 100%;
+}
+
+.warning .close-warning
+{
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: gray;
+    cursor: pointer;
+    float: right;
+    padding: 0;
+    text-align: right;
+}
+
+.warning .close-warning:hover
+{
+    color: black;
+}
+
+@media screen and (max-width: 600px)
+{
+    .region-box .region-list ul
+    {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        overflow: auto;
+    }
+}

@@ -6,10 +6,10 @@
 
         function __construct()
         {
-            $dbuser = "riotapi";
-            $dbpass = "dPzx8sh7QjQaAAdq";
-            $dbname = "champion_mastery";
-            $server = "localhost";
+            $dbuser = "";
+            $dbpass = "";
+            $dbname = "";
+            $server = "";
 
             $this->connection = new mysqli($server, $dbuser, $dbpass, $dbname);
 

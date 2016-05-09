@@ -3,7 +3,7 @@
     require("include/images.inc.php");
     require("include/riot-api.inc.php");
 
-    $api_key = "1008ed84-cb4c-40d2-a128-6799f3be1fd8";
+    $api_key = "";
 
     if(isset($_GET["page"]))
         $page = $_GET["page"];

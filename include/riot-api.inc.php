@@ -76,6 +76,8 @@
 
         function GetSummonerData($summoner_name, $region)
         {
+            $summoner_name = str_replace(' ', '%20', $summoner_name);
+        	            
             $api_key = $this->api_key;
             $url = "https://$region.api.pvp.net/api/lol/$region/v1.4/summoner/by-name/$summoner_name?api_key=$api_key";
 

@@ -2,7 +2,7 @@
     class RiotAPI
     {
         var $api_key = "";
-        var $mastery_titles = array('Assassin' => array("Thug", "Prowler", "Cutthroat", "Reaper", "Slayer"), 'Fighter' => array("Scrapper", "Brawler", "Warrior", "Veteran", "Destroyer"), "Mage" => array("Initiate", "Conjurer", "Invoker", "Magus", "Warlock"), 'Marksman' => array("Tracker", "Strider", "Scout", "Ranger", "Pathfinder"), 'Support' => array("Aide", "Protector", "Keeper", "Defender", "Guardian"), 'Tank' => array("Grunt", "Bruiser", "Bulwark", "Enforcer", "Brute"));
+        var $mastery_titles = array('Assassin' => array("Thug", "Prowler", "Cutthroat", "Reaper", "Slayer", "Executioner", "Deathmaster"), 'Fighter' => array("Scrapper", "Brawler", "Warrior", "Veteran", "Destroyer", "Warmonger", "Warlord"), "Mage" => array("Initiate", "Conjurer", "Invoker", "Magus", "Warlock", "Sorcerer", "Archmage"), 'Marksman' => array("Tracker", "Strider", "Scout", "Ranger", "Pathfinder", "Sharpshooter", "Sniper"), 'Support' => array("Aide", "Protector", "Keeper", "Defender", "Guardian", "Sentinel", "Warden"), 'Tank' => array("Grunt", "Bruiser", "Bulwark", "Enforcer", "Brute", "Colossus", "Juggernaut"));
         var $platform_ids = array('BR' => "BR1", 'EUNE' => "EUN1", 'EUW' => "EUW1", 'JP' => "JP1", 'KR' => "KR1", 'LAN' => "LA1", 'LAS' => "LA2", 'NA' => "NA1", 'OCE' => "OC1", 'TR' => "TR1", 'RU' => "RU", 'PBE' => "PBE1");
 
         function RiotAPI($api_key)

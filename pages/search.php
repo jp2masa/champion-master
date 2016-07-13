@@ -24,13 +24,6 @@
         if($mastery_data)
         {
             $champion_data = json_decode(file_get_contents("data/6.9.1/champion.json"), true);
-
-            function sort_mastery($a, $b)
-            {
-                return $b["mastery_points"] - $a["mastery_points"];
-            }
-
-            usort($mastery_data, "sort_mastery");
         }
     }
 

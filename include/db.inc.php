@@ -76,7 +76,7 @@
         {
             $mastery_data = array();
 
-            $sql = "SELECT * FROM champion_mastery_by_user WHERE summoner_id = '$summoner_id' AND region = '$region' ORDER BY mastery_level DESC";
+            $sql = "SELECT * FROM champion_mastery_by_user WHERE summoner_id = '$summoner_id' AND region = '$region' ORDER BY mastery_points DESC";
 
             $result = $this->connection->query($sql);
 
